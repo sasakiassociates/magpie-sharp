@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>Sasaki.MagpieObjects.Speckle</AssemblyName>
+        <RootNamespace>Sasaki.MagpieObjects.Speckle</RootNamespace>
+        <LangVersion>8.0</LangVersion>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MagpieObjects\MagpieObjects.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Speckle.Core" Version="2.11.1" />
+    </ItemGroup>
+    
+    <PropertyGroup>
+        <IsDesktopBuild Condition="'$(IsDesktopBuild)' == ''">true</IsDesktopBuild>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>TRACE;</DefineConstants>
+        <DocumentationFile>bin\Debug\MagpieObjectsSpeckle.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\MagpieObjectsSpeckle.xml</DocumentationFile>
+    </PropertyGroup>
+
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsDesktopBuild)' == true">
+        <Exec Condition="$([MSBuild]::IsOsPlatform('Windows'))" Command="xcopy /Y /S &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;$(AppData)\Speckle\Kits\Sasaki\&quot;"/>
+    </Target>
+
+
+</Project>

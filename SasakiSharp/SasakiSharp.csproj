@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Sasaki</RootNamespace>
+        <AssemblyName>Sasaki</AssemblyName>
+    </PropertyGroup>
+
+
+    <PropertyGroup>
+        <IsDesktopBuild Condition="'$(IsDesktopBuild)' == ''">true</IsDesktopBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>TRACE;</DefineConstants>
+        <DocumentationFile>bin\Debug\SasakiSharp.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\SasakiSharp.xml</DocumentationFile>
+    </PropertyGroup>
+
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(IsDesktopBuild)' == true">
+        <Exec Condition="$([MSBuild]::IsOsPlatform('Windows'))" Command="xcopy /Y /S &quot;$(TargetDir)$(AssemblyName).dll&quot; &quot;$(AppData)\Speckle\Kits\Sasaki\&quot;"/>
+    </Target>
+
+
+</Project>

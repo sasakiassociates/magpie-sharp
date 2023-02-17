@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagpieObjects", "MagpieObjects\MagpieObjects.csproj", "{A6A6E79B-1B2B-4265-8BEB-084CB4176E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagpieObjectsSpeckle", "MagpieObjectsSpeckle\MagpieObjectsSpeckle.csproj", "{8D37549A-0C9D-4C31-B128-9768B246CF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagpieObjectsConverter", "MagpieObjectsConverter\MagpieObjectsConverter.csproj", "{7575EDF9-0792-4430-BE3D-0BA136A6288A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SasakiSharp", "SasakiSharp\SasakiSharp.csproj", "{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagpieObjectsSpeckleTests", "Tests\MagpieObjectsSpeckleTests\MagpieObjectsSpeckleTests.csproj", "{D58F7228-8D1D-43D3-8E33-E292D832D02C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{558BE6AF-5CDD-47E8-AEE2-B2567D853D97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EBF75C22-5344-4927-A85F-802C51F1B4E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A6E79B-1B2B-4265-8BEB-084CB4176E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A6E79B-1B2B-4265-8BEB-084CB4176E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A6E79B-1B2B-4265-8BEB-084CB4176E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A6E79B-1B2B-4265-8BEB-084CB4176E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D37549A-0C9D-4C31-B128-9768B246CF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D37549A-0C9D-4C31-B128-9768B246CF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D37549A-0C9D-4C31-B128-9768B246CF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D37549A-0C9D-4C31-B128-9768B246CF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7575EDF9-0792-4430-BE3D-0BA136A6288A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7575EDF9-0792-4430-BE3D-0BA136A6288A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7575EDF9-0792-4430-BE3D-0BA136A6288A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7575EDF9-0792-4430-BE3D-0BA136A6288A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58F7228-8D1D-43D3-8E33-E292D832D02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58F7228-8D1D-43D3-8E33-E292D832D02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58F7228-8D1D-43D3-8E33-E292D832D02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58F7228-8D1D-43D3-8E33-E292D832D02C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{920CDB9E-0C7A-4E9F-9BC3-D8F994B26B96} = {558BE6AF-5CDD-47E8-AEE2-B2567D853D97}
+		{D58F7228-8D1D-43D3-8E33-E292D832D02C} = {EBF75C22-5344-4927-A85F-802C51F1B4E6}
+	EndGlobalSection
+EndGlobal
